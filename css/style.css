@@ -166,4 +166,52 @@ footer {
     border-top: 4px solid var(--gold);
 }
 
-footer p { font-size: 0.9rem; opacity: 0.8; }
+/* Support & Donation UI */
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.donation-card {
+    background-color: var(--wine);
+    color: var(--cream);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+}
+
+.donation-card h3 { color: var(--gold); margin-top: 0; }
+
+.progress-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border: 1px solid var(--gold);
+}
+
+.progress-bar {
+    background-color: var(--gold);
+    height: 100%;
+    width: 35%; /* Placeholder percentage applied */
+    transition: width 1s ease-in-out;
+}
+
+.mission-statement {
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--wine);
+}
+
