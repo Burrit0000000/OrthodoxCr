@@ -55,10 +55,7 @@ h1, h2, h3, .nav-link {
 header {
     background-color: var(--wine);
     border-bottom: 3px solid var(--gold);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 1.5rem 0;
 }
 
 nav {
@@ -66,19 +63,39 @@ nav {
     justify-content: center;
     gap: 1.5rem;
     padding: 0.5rem;
+    flex-wrap: wrap; /* Allows stacking on mobile */
 }
 
 nav a {
     color: var(--gold);
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 nav a:hover {
     color: var(--cream);
+    transform: scale(1.05);
 }
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 
 /* Hero Section */
 .hero {
