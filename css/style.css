@@ -1,0 +1,152 @@
+/* 
+   OrthodoxCR - Main Design System
+   "Humble Majesty"
+*/
+
+:root {
+    /* Primary Colors */
+    --wine: #722f37;
+    --gold: #c5a028;
+    --cream: #fef9e7;
+    --dark: #4f3f35;
+    
+    /* Semantic Shades */
+    --wine-dark: #5a242b;
+    --wine-light: #8e3e48;
+    --gold-light: #d4b446;
+    --brown-bg: #6b4f32;
+    
+    /* Effects */
+    --glass: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Marcellus&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--brown-bg);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, .nav-link {
+    font-family: 'Cinzel', 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Fix for RU being in Cyrillic */
+[lang="ru"] h1, [lang="ru"] h2, [lang="ru"] h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--wine);
+    border-bottom: 3px solid var(--gold);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cream);
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--cream);
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: -50px auto 3rem;
+    padding: 2rem;
+    background-color: var(--cream);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+h2 { color: var(--wine); border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; }
+
+/* Buttons */
+.button {
+    background-color: var(--gold);
+    color: var(--wine);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    background-color: var(--wine);
+    color: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--wine);
+    color: var(--cream);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-top: 4px solid var(--gold);
+}
+
+footer p { font-size: 0.9rem; opacity: 0.8; }
